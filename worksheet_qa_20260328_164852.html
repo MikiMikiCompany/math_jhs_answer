@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学問題</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    
+    <style>
+        :root { --primary-color: #2c3e50; }
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .problem-container {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+        .problem-header {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 3px;
+        }
+        .meta-info {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+        .question-box {
+            padding: 5px;
+        }
+        .answer-text {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #c0392b;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .explanation-box {
+            padding: 10px 15px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #3498db;
+        }
+        /* フッター全体のスタイル（コンパクトに横並び） */
+        .footer-area {
+            margin-top: 15px;
+            page-break-inside: avoid;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 15px;
+        }
+        /* QRコードのスタイル */
+        .qr-code-box {
+            text-align: center;
+        }
+        .qr-code-box p {
+            margin: 0 0 2px 0;
+            font-size: 0.75em;
+            color: #555;
+            font-weight: bold;
+        }
+        .qr-code-box img {
+            width: 90px;
+            height: 90px;
+        }
+        .creation-date {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* ★ 印刷時専用のスタイル ★ */
+        @media print {
+            body { max-width: 100%; padding: 0; }
+            .problem-container { margin-bottom: 50px; }
+            .footer-area { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-questions">
+
+        <div class="problem-container">
+            <div class="problem-header">
+                問 1 <span class="meta-info">（式の計算（多項式の加減・乗除） / 難易度: hard）</span>
+            </div>
+            <div class="question-box">
+                次の等式が成り立つとき、単項式 $X$ を求めなさい。<br><br>$$ 3x^2y \times X \div (-2xy^2)^2 = -\frac{9x}{8y} $$
+            </div>
+            <div class="answer-text">【答え】 $X = -\frac{3}{2}xy^2$</div>
+            <div class="explanation-box">
+                <strong>【解説】</strong><br>
+                ① 左辺の累乗を計算し、式を整理する。<br>$$3x^2y \times X \div 4x^2y^4 = -\frac{9x}{8y}$$<br>$$\frac{3x^2y}{4x^2y^4} \times X = -\frac{9x}{8y}$$<br>② 左辺の係数と文字を簡約化する。<br>$$\frac{3}{4y^3} \times X = -\frac{9x}{8y}$$<br>③ $X$ について解くために、両辺に $\frac{4y^3}{3}$ を掛ける。<br>$$X = -\frac{9x}{8y} \times \frac{4y^3}{3}$$<br>④ 約分を行い、結果を求める。<br>$$X = -\frac{9 \times 4}{8 \times 3} \times \frac{x \times y^3}{y} = -\frac{3}{2}xy^2$$
+            </div>
+        </div>
+        <div class="problem-container">
+            <div class="problem-header">
+                問 2 <span class="meta-info">（式の計算（多項式の加減・乗除） / 難易度: hard）</span>
+            </div>
+            <div class="question-box">
+                $A = \frac{x-2y}{3}, B = \frac{2x+y}{4}$ であるとき、$3(2A-B) - 2(A-3B)$ を $x, y$ を用いて表しなさい。
+            </div>
+            <div class="answer-text">【答え】 $\frac{34x-23y}{12}$</div>
+            <div class="explanation-box">
+                <strong>【解説】</strong><br>
+                ① 代入する前に、$A, B$ を含む式を簡略化する。<br>$$3(2A-B) - 2(A-3B) = 6A - 3B - 2A + 6B = 4A + 3B$$<br>② $4A + 3B$ に $A = \frac{x-2y}{3}, B = \frac{2x+y}{4}$ を代入する。<br>$$4 \times \frac{x-2y}{3} + 3 \times \frac{2x+y}{4} = \frac{4x-8y}{3} + \frac{6x+3y}{4}$$<br>③ 分母を $12$ にそろえて通分し、分子を計算する。<br>$$\frac{4(4x-8y) + 3(6x+3y)}{12} = \frac{16x - 32y + 18x + 9y}{12}$$<br>④ 同類項をまとめると、$\frac{34x-23y}{12}$ となる。
+            </div>
+        </div>
+        <div class="problem-container">
+            <div class="problem-header">
+                問 3 <span class="meta-info">（式の計算（多項式の加減・乗除） / 難易度: hard）</span>
+            </div>
+            <div class="question-box">
+                次の計算をしなさい。<br><br>$$ \left( - \frac{2}{3}x^2y \right)^3 \div \left( \frac{4}{9}xy^2 \right)^2 \times \left( -\frac{3}{2}y \right)^2 $$
+            </div>
+            <div class="answer-text">【答え】 $-\frac{27}{8}x^4y$</div>
+            <div class="explanation-box">
+                <strong>【解説】</strong><br>
+                ① 各項の累乗を正確に計算する。<br>$$\left( -\frac{2}{3}x^2y \right)^3 = -\frac{8}{27}x^6y^3$$<br>$$\left( \frac{4}{9}xy^2 \right)^2 = \frac{16}{81}x^2y^4$$<br>$$\left( -\frac{3}{2}y \right)^2 = \frac{9}{4}y^2$$<br>② 全体を一つの分数式にまとめる。<br>$$-\frac{8x^6y^3}{27} \times \frac{81}{16x^2y^4} \times \frac{9y^2}{4}$$<br>③ 係数部分を計算する。<br>$$-\left( \frac{8 \times 81 \times 9}{27 \times 16 \times 4} \right) = -\left( \frac{1 \times 3 \times 9}{1 \times 2 \times 4} \right) = -\frac{27}{8}$$<br>④ 文字部分を計算する。<br>$$\frac{x^6}{x^2} \times \frac{y^3 \times y^2}{y^4} = x^4 \times \frac{y^5}{y^4} = x^4y$$<br>⑤ 係数と文字を合わせて、結果は $-\frac{27}{8}x^4y$ となる。
+            </div>
+        </div>
+        <div class="problem-container">
+            <div class="problem-header">
+                問 4 <span class="meta-info">（式の計算（多項式の加減・乗除） / 難易度: hard）</span>
+            </div>
+            <div class="question-box">
+                次の計算をしなさい。<br><br>$$ (-2a^2b)^3 \div \left( \frac{4}{3}ab^2 \right)^2 \times \left( -\frac{1}{6}a \right) $$
+            </div>
+            <div class="answer-text">【答え】 $\frac{3a^5}{4b}$</div>
+            <div class="explanation-box">
+                <strong>【解説】</strong><br>
+                ① 各項の累乗を計算する。<br>$$(-2a^2b)^3 = -8a^6b^3$$<br>$$\left( \frac{4}{3}ab^2 \right)^2 = \frac{16}{9}a^2b^4$$<br>② 式全体を乗法の形に書き換える。<br>$$-8a^6b^3 \times \frac{9}{16a^2b^4} \times \left( -\frac{a}{6} \right)$$<br>③ 係数と文字の部分に分けて計算を進める。係数は、<br>$$-8 \times \frac{9}{16} \times \left( -\frac{1}{6} \right) = \frac{8 \times 9 \times 1}{16 \times 6} = \frac{72}{96} = \frac{3}{4}$$<br>④ 文字の部分は、<br>$$\frac{a^6 \times a}{a^2} \times \frac{b^3}{b^4} = a^5 \times \frac{1}{b} = \frac{a^5}{b}$$<br>⑤ よって、求める結果は $\frac{3a^5}{4b}$ となる。
+            </div>
+        </div>
+        <div class="problem-container">
+            <div class="problem-header">
+                問 5 <span class="meta-info">（式の計算（多項式の加減・乗除） / 難易度: hard）</span>
+            </div>
+            <div class="question-box">
+                $x = \frac{2}{3}, y = -\frac{3}{4}$ のとき、次の式の値を求めなさい。<br><br>$$ \frac{5x-2y}{3} - \frac{3x-4y}{2} + \frac{x+y}{6} $$
+            </div>
+            <div class="answer-text">【答え】 $-\frac{65}{72}$</div>
+            <div class="explanation-box">
+                <strong>【解説】</strong><br>
+                ① まずは与えられた式をまとめて簡略化する。分母を $6$ にそろえて通分すると、以下のようになる。<br>$$\frac{2(5x-2y) - 3(3x-4y) + (x+y)}{6}$$<br>② 分子を展開し、同類項をまとめる。<br>$$\frac{10x - 4y - 9x + 12y + x + y}{6} = \frac{2x + 9y}{6}$$<br>③ 簡略化した式に $x = \frac{2}{3}, y = -\frac{3}{4}$ を代入する。<br>$$\frac{2 \times \frac{2}{3} + 9 \times (-\frac{3}{4})}{6} = \frac{\frac{4}{3} - \frac{27}{4}}{6}$$<br>④ 分子の計算を行い、全体の値を求める。<br>$$\frac{\frac{16-81}{12}}{6} = \frac{-\frac{65}{12}}{6} = -\frac{65}{72}$$
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-area">
+        
+        <div class="creation-date">作成日: 2026年03月28日</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>
